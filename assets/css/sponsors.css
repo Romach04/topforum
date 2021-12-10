@@ -1,0 +1,47 @@
+.container{
+    height: 1270px;
+    width: 1920px;
+}
+.content{
+    margin-left: 390px;
+    margin-right: 390px;
+}
+
+
+.text-sponsors{
+    margin-top: 10em;
+    height: 175px;
+}
+.sponsors-h{
+    text-align: center;
+    font-weight: 500;
+    font-size: 22px;
+}
+.sponsors-p{
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+.main-card{
+    margin-top: 170px;
+    height: 200px;
+}
+.card-column{
+    display: flex;
+    width: 850px;
+    height: 380px;
+    margin-left: 9em;
+    margin-top: 17em;
+}
+.card-con{
+    width: 205px;
+    height: 380px;
+    margin-left: 55px;
+}
+.p-card {
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+}
