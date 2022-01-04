@@ -1,13 +1,22 @@
 
 let slideIndex = 1;
 
-const slides = document.querySelectorAll('.item-slider '),
+const slides = document.querySelectorAll('.item-slider'),
         prev = document.querySelector('.prev'),
         next = document.querySelector('.next'),
         total = document.querySelector('#total'),
         current = document.querySelector('#current');
 
-showSlides(slideIndex);      
+showSlides(slideIndex); 
+
+
+
+slides.forEach(item => {
+    item.classList.add("animated");
+});   
+
+
+
     
 if (slides.length < 10 ){
     total.textContent = `0${slides.length}`;
@@ -40,14 +49,31 @@ function plusSlides(n) {
 
 prev.addEventListener('click', function(){
     plusSlides(-1);
+    slides[slideIndex - 1].classList.remove('slideInLeft');
+    slides[slideIndex - 1].classList.add('slideInRight');
 
 });
 
 next.addEventListener('click', function () {
     plusSlides(1);
+    slides[slideIndex - 1].classList.remove('slideInRight');
+    slides[slideIndex - 1].classList.add('slideInLeft');
+
 });
-$(document).ready(function(){
-    $('.slider-place').slick({
+
+
+
+let icon = document.querySelector('.icon1'),
+    modalbtn = document.querySelector('.register-btn popup-open');
+
+
+
+// slider
+
+
+
+jQuery(document).ready(function(){
+    jQuery('.slider-place').slick({
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3
@@ -55,32 +81,41 @@ $(document).ready(function(){
   });
 });
 
-// modal
 
-$(document).ready(function () {
-    $('.popup-open').click(function() {
-		$('.popup-fade').fadeIn();
+// modal
+jQuery(document).ready(function () {
+    jQuery('.popup-open').click(function() {
+        icon.style.display = 'none';
+		jQuery('.popup-fade').fadeIn();
+        document.body.style.overflow = "hidden";
+    
 		return false;
 	});	
 
-    $('.popup-close').click(function() {
-		$(this).parents('.popup-fade').fadeOut();
+    jQuery('.popup-close').click(function() {
+		jQuery(this).parents('.popup-fade').fadeOut();
+        document.body.style.overflow = "";
+        icon.style.display = 'block';
 		return false;
 	});        
 	// Закрытие по клавише Esc.
 
-	$(document).keydown(function(e) {
+	jQuery(document).keydown(function(e) {
 		if (e.keyCode === 27) {
 			e.stopPropagation();
-			$('.popup-fade').fadeOut();
+			jQuery('.popup-fade').fadeOut();
+            document.body.style.overflow = "";
+            icon.style.display = 'block';
 		}
 	});
 	// Клик по фону, но не по окну.
 
-	$('.popup-fade').click(function(e) {
-		if ($(e.target).closest('.popup').length == 0) {
-			$(this).fadeOut();					
+	jQuery('.popup-fade').click(function(e) {
+		if (jQuery(e.target).closest('.popup').length == 0) {
+			jQuery(this).fadeOut();					
 		}
+        document.body.style.overflow = "";
+        icon.style.display = 'block';
 	});	
 
 

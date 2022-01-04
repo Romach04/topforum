@@ -1,13 +1,18 @@
 {
     "folders": [
         {
-            "path": "..\\..\\..\\..\\..\\..\\..\\..\\Users\\Роман\\Desktop\\work\\Uber Eats"
+            "name": "topforum",
+            "path": "."
         },
         {
-            "path": "."
+            "name": "Source",
+            "path": "..\\..\\..\\..\\..\\..\\..\\MAMP\\htdocs\\Source"
+        },
+        {
+            "path": "..\\..\\..\\..\\..\\childhood\\wp-content\\themes\\childhood"
         }
     ],
     "settings": {
-        "liveServer.settings.multiRootWorkspaceName": "topforum"
+        "liveServer.settings.multiRootWorkspaceName": "Source"
     }
 }

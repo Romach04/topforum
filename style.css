@@ -61,7 +61,6 @@ a{
 /* header */
 .zal-img{
     width: 100%;
-    min-width: 1200px;
 }
 .top-forum{
     width: 100%;
@@ -69,17 +68,21 @@ a{
     background-color:rgb(255, 255, 255);
 }
 .logo{
-    padding-left: 380px;
-    padding-top: 15px;
+    margin-left: 380px;
+    margin-top: 20px;
     pointer-events: none;
+    display: inline;
+    width: 168px;
+    height: 72px;
 }
+
 .logo2{
     padding-left:40px;
-    padding-bottom: 18px;
+    /* padding-bottom: 18px; */
     pointer-events: none;
 }
 .logo3{
-    padding-bottom: 18px;
+    /* padding-bottom: 18px; */
     padding-left:180px;
     pointer-events: none;
 }
@@ -116,6 +119,7 @@ a{
     background-color: rgb(201, 156, 71);
     border:none;
     color:rgb(255, 255, 255);
+    cursor: pointer;
 }
 /* body */
 .container{
@@ -136,19 +140,24 @@ a{
 .end-text{
     margin-left: 240px;
 }
-/* icons */
-/* .img-icons{
-    margin-top: 67px;
-} */
+
 .icon1{
-    padding-left: 100px;
+    position: absolute;
+    left: 140px;
+    bottom: 300px;
 }
 .icon2{
-    padding-left: 280px;
+    margin-left: 280px;
 }
 .icon3{
-    padding-left: 240px;
+    margin-left: 240px;
 }
+.content-items{
+    position: relative;
+    margin-left: 22em;
+    margin-top: 200px;
+}
+
 .under-btn{
     width: 373px;
     height: 273px;
@@ -179,7 +188,7 @@ h2{
     height: 34px;
     border: none;
     margin-left: 125px;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     font-size: 13px;
     color:white;
     background-color: rgb(212, 193, 152);
@@ -210,7 +219,7 @@ h2{
 .btn-row{
     height: 72px;
     background-color:rgb(255, 255, 255);
-    margin-top:50px;
+    /* margin-top:50px; */
     display: flex;
     justify-content: center;
 }
@@ -341,7 +350,6 @@ h2{
 }
 /* footer */
 footer{
-    height: 347px;
     width: 100%;
     background-color: rgb(50, 50, 50);
 }
@@ -351,6 +359,7 @@ footer{
 .group_footer{
     margin-top: 50px;
     line-height: 22px;
+
 
     
 }
@@ -480,6 +489,23 @@ footer{
         max-width: none;
     }
 } */
+/* @media (max-width:1899px){
+    .copirat{
+        position: fixed;
+    }
+} */
+
+@media (max-width:1700px){
+    .customer-h{
+        padding-left: 10em;
+    }
+    .btn-row{
+        padding-left: 1em;
+    }
+    .zal-img{
+        width: 1700px;
+    }
+}
 
 
 @media (max-width:1500px){
@@ -487,13 +513,81 @@ footer{
         margin-left: 100px;
 
     }
+    .p.texp{
+        text-align: justify;
+    }
     .img-icons{
         display: flex;
     }
     .btn-row{
         display: flex;
         justify-content: center;
-        margin-left: 5em;
+        margin-left: 8em;
     }
+    .offer__slider{
+        margin-left: 170px;
+
+    }
+    .customer-h{
+        padding-right: 10px;
+    }
+    .stelSpan{
+        margin-left: 8em;
+    }
+    .slider-place{
+        margin-left: 370px
+    }
+    /* head */
+    .top-bt{
+        left: 1015px;
+    }
+    .register-btn{
+        left: 1015px;
+    }
+    .zal-img{
+        width: 1500px;
+    }
+    
 }
 
+
+@media (max-width:1400px){
+    .a1{
+        left: 160px;
+    }
+    .a2{
+        left:260px
+    }
+    .a3{
+        left:360px;
+    }
+    .a4{
+        left: 460px;
+    }
+    .content-items{
+        margin-left: 15em
+    }
+    .offer__slider{
+        margin-left: 100px;
+
+    }
+    .logo{
+        padding-left: 160px;
+    }
+    .logo3{
+        padding-left: 180px;
+    }
+    .btn-row{
+        display: flex;
+        justify-content: center;
+        margin-left: 1em;
+    }
+    .contact-foot{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .zal-img{
+        width: 1400px;
+    }
+    
+}   
