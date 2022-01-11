@@ -1,30 +1,19 @@
 <?php 
-    get_header();
-?>  
+
+    /*
+    Template Name: Спонсоры
+    */
+?>
+
+
+<?php 
+
+get_header();
+
+?>
+
+
 <body>
-    <nav class="head">
-        <div class="shapka">
-            <div class="link">
-                <a class="a1 item_link" href="#">Sponsors<span class="menu-line"></span></a>
-                <a class="a2 item_link" href="#">Exhibitors<span class="menu-line"></span></a>
-                <a class="a3 item_link" href="#">Speakers<span class="menu-line"></span></a>
-                <a class="a4 item_link" href="#">Media</a>
-            </div>
-            <button class="top-bt" >TOP FORUM CLUB</button>
-        </div>
-    </nav>
-    <header class="top-forum">
-        <a class="a-main" href="index.html"><img class="logo" src="<?php echo bloginfo('template_url'); ?>/assets/img/Screenshot_1.png"></a>
-        <img class="logo2" src="<?php echo bloginfo('template_url'); ?>/assets/img/Screenshot_2.png">
-        <div class="events-head">
-            <a class="events" href='#'>UPCOMING EVENTS</a>
-        </div>
-        <img class="logo3" src="<?php echo bloginfo('template_url'); ?>/assets/img/Screenshot_3.png">
-        <div class="contacts-head">
-            <a href="#" class="contacts">CONTACTS</a>
-        </div>
-        <button class="register-btn" >REGISTER NOW</button>
-    </header>
     <div class="container sk">
         <div class="content">
             <div class="text-sponsors">

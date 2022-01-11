@@ -7,7 +7,9 @@
             <div class="popup-fade">
                 <div class="popup">
                     <a class="popup-close" href="#">Close</a>
-                    <p>In  order to register on Topforum, please write to our <span class="span-modal">Top-forum</span>  email.You are waiting for new people!</p>
+                    <p>In  order to register on Topforum, please write to our <span class="span-modal">Top-forum</span>  email.You are waiting for new people!
+                    <br>Please,write you phone</p>
+                    <?php echo do_shortcode('[contact-form-7 id="5" title="телефон"]');?>
                 </div>		
             </div>
             <div class="text-forum">
@@ -39,31 +41,70 @@
         </div>
         <!-- close content -->
         <!-- contetn-slider -->
-        <div class="contetn-slider">
-            <div class="wrapper-slide">
-                <h2 class="customer-h">CUSTOMER REVIEWS</h2>
-                <div class="stelSpan">
-                    <span id="current">01</span>
-                    <span id="total">/<?php the_field('max_value_slider');?></span>
-              
-                </div>
-                <div class="offer__slider ">
-                    <div class="item-slider item1" name="slide">
-                        <img src="<?php the_field('1_image_slider');?>" all='image'>
-                    </div>
-                    <div class="item-slider item2" name="slide" >
-                        <img src="<?php the_field('2_image_slider');?>" all='image'>
-                    </div>
-                    <div class="prev strelka">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/prevset.png">
-                    </div>
-                    <div class="next strelka">
-                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/nextset.png">
-                    </div>
-                </div>
-            </div>
+        <div
+            style="
+            <?php 
+                $field = get_field('color_back');
+                echo $field;
+                if ($field =="коричневый"){
+                    ?>
+                        background-color: rgb(248, 243, 233);
+                    <?php
+                }
+                if ($field =="другой"){
+                    ?>
+                        background-color: rgb(200, 243, 233);
+                    <?php
+                }
+
+                ?>"
+            class="contetn-slider" >
+                <div class="wrapper-slide">
+                    <h2 class="customer-h">CUSTOMER REVIEWS</h2>
+                    <div class="stelSpan">
+                        <span id="current">01</span>
+                        <span id="total">/<?php the_field('max_value_slider');?></span>
                 
-        </div>  
+                    </div>
+                    <div class="offer__slider ">
+                        <?php
+                            $my_posts = get_posts( array(
+                                'numberposts' => -1,
+                                'category_name'    => 'slider',
+                                'orderby'     => 'date',
+                                'order'       => 'ASC',
+                                'post_type'   => 'post',
+                                'suppress_filters' => true, 
+                            ) );
+
+                            foreach( $my_posts as $post ){
+                                setup_postdata( $post );
+                                ?>
+                                    <div class="item-slider item1" name="slide">
+                                        <img src="<?php the_field('1_image_slider');?>" all='image'>
+                                    </div>
+                                    <div class="item-slider item1" name="slide">
+                                        <img src="<?php the_field('2_image_slider');?>" all='image'>
+                                    </div>
+
+                                <?php
+
+                                
+                            }
+
+                            wp_reset_postdata(); // сброс
+                        ?>
+                        
+                        <div class="prev strelka">
+                            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/prevset.png">
+                        </div>
+                        <div class="next strelka">
+                            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/nextset.png">
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>  
         <!-- content -->
 
         <div class="content niz">

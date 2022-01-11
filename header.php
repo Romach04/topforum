@@ -18,12 +18,31 @@
 <body>
     <nav class="head">
         <div class="shapka">
-            <div class="link">
-                <a class="a1 item_link" href="<?php the_permalink() ?> /section/sponsers.php">Sponsors<span class="menu-line"></span></a>
-                <a class="a2 item_link" href="#">Exhibitors<span class="menu-line"></span></a>
-                <a class="a3 item_link" href="#">Speakers<span class="menu-line"></span></a>
-                <a class="a4 item_link" href="#">Media</a>
-            </div>
+            <?php 
+                wp_nav_menu( [
+                    'menu'            => 'Main', 
+                    'container'       => 'false',
+                    'menu_class'      => 'link', 
+                    'echo'            => true,
+                    'fallback_cb'     => 'wp_page_menu',
+                    'items_wrap'      => '<ul class="link">%3$s</ul>',
+                    'depth'           => 1
+                ] );
+            
+            // wp_nav_menu( [
+            //     'menu'            => 'Main',
+            //     'container'       => 'div',
+            //     'container_class' => 'link',
+            //     'container_id'    => '',
+            //     'menu_class'      => 'link',
+            //     'echo'            => true,
+            //     'fallback_cb'     => 'wp_page_menu',
+            //     'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+            //     'depth'           => 0,
+            //     'walker'          => '',
+            //     ] );
+            ?>
+                
             <button class="top-bt" >TOP FORUM CLUB</button>
         </div>
     </nav>

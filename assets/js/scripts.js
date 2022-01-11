@@ -91,13 +91,22 @@ jQuery(document).ready(function () {
     
 		return false;
 	});	
-
+    
     jQuery('.popup-close').click(function() {
 		jQuery(this).parents('.popup-fade').fadeOut();
         document.body.style.overflow = "";
-        icon.style.display = 'block';
+        icon.style.display = 'block';          
 		return false;
-	});        
+	});
+
+    jQuery('.minibutton').click(function() {
+		jQuery(this).parents('.popup-fade').fadeOut();
+        document.body.style.overflow = "";
+        icon.style.display = 'block';          
+		return false;
+	}); 
+    
+    
 	// Закрытие по клавише Esc.
 
 	jQuery(document).keydown(function(e) {
